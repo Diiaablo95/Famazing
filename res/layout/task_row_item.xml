@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/complete_border"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/loading_message"
+        android:id="@+id/task_description_textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#000"
+        android:textSize="@dimen/abc_text_size_menu_material" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageView"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/stickman" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/loading_message"
+                android:id="@+id/giverName_textView"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="#000"
+                android:textSize="@dimen/abc_text_size_medium_material" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageView2"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/clock" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/loading_message"
+                android:id="@+id/date_completion_textView"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="#000"
+                android:textSize="@dimen/abc_text_size_medium_material" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/statusTextView"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#000"
+            android:textSize="@dimen/abc_text_size_headline_material"
+            android:textStyle="italic"
+            android:allowUndo="false"
+            android:text="@string/loading_message"
+            android:autoText="false"
+            android:lines="1"
+            android:maxLines="1"
+            android:textIsSelectable="false"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:id="@+id/buttonsLayout">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:id="@+id/declineButton"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/cross"
+                android:background="@drawable/rounded_button_holo_red"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:id="@+id/acceptButton"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/tick"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rounded_button_holo_green"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

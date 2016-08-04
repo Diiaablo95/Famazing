@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="@string/loading_message"
+        android:id="@+id/tasks_count_textView"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#000"
+        android:textSize="@dimen/abc_text_size_headline_material"
+        android:textIsSelectable="false" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:id="@+id/create_task_button"
+        android:background="@drawable/rounded_button_app_theme"
+        android:layout_gravity="center"
+        android:textColor="#FFF"
+        android:textSize="@dimen/abc_text_size_title_material" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tasks_listView"
+                android:layout_weight="3"
+                android:layout_marginTop="30dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/no_next_task_label"
+                android:id="@+id/noTaskTextView"
+                android:textColor="#000"
+                android:textSize="@dimen/abc_text_size_headline_material"
+                android:visibility="gone"
+                android:gravity="center_vertical|center_horizontal" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_message"
+            android:id="@+id/loading_textView"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:textSize="@dimen/abc_text_size_display_1_material" />
+    </FrameLayout>
+
+</LinearLayout>

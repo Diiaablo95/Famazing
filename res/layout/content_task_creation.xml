@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="projctx.famazing.ui.TaskCreationActivity"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameEditText"
+        android:hint="Task name" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/doer_label"
+            android:id="@+id/textView5"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:textColor="#000"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <NumberPicker
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:id="@+id/doerPicker"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <projctx.famazing.utility.DateEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/date_editText"
+        android:layout_gravity="center_horizontal"
+        android:hint="Preferred end date (optional)" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/location_label"
+            android:id="@+id/textView7"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#000"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:layout_weight="1" />
+
+        <NumberPicker
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/locationPicker"
+            android:layout_weight="2" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="+"
+            android:id="@+id/newPlaceButton"
+            android:background="@drawable/rounded_button_app_theme"
+            android:textColor="#FFF"
+            android:layout_marginLeft="30dp" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionEditText"
+        android:lines="2"
+        android:hint="Task description" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_task_button_label"
+        android:id="@+id/create_task_button"
+        android:background="@drawable/rounded_button_app_theme"
+        android:textColor="#FFF"
+        android:enabled="false" />
+</LinearLayout>

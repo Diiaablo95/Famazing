@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/preferences_group_name">
+        <EditTextPreference android:key="@string/emergency_number_key"
+            android:inputType="number"
+            android:title="@string/emergency_number_setting_title"
+            android:defaultValue="@string/default_alert_number"/>
+    </PreferenceCategory>
+</PreferenceScreen>
